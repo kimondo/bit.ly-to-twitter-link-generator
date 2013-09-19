@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>bit(.ly) to tweet</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<!-- Script by hscripts.com -->
+<script type="text/javascript">
+//Edit the counter/limiter value as your wish
+var count = "140";   //Example: var count = "175";
+function limiter(){
+var tex = document.webtivist.tweet.value;
+var len = tex.length;
+if(len > count){
+        tex = tex.substring(0,count);
+        document.myform.comment.value =tex;
+        return false;
+}
+document.webtivist.limit.value = count-len;
+}
+
+</script>
+<!-- Script by hscripts.com -->
+
+
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+
+<div id="container">
+  <div id="webtivistform">
+    <h1>Bit(.ly) to tweet link generator</h1>
+   <p>Just a little widget to generate a click to tweet bit.ly link</p>
+     <form action="bitlytotweet.php" method="post" name="webtivist" id="webtivist">
+     <fieldset><legend>Enter your tweet</legend>		
+<label>tweet</label>
+
+<textarea name="tweet" onkeyup=limiter()></textarea><br>
+<script type="text/javascript">
+document.write("<input type=text name=limit size=4 readonly value="+count+"> characters remaining");
+</script>
+
+
+<!-- <input type="text" name="tweet" value=""> -->
+</fieldset>
+
+
+
+
+  <button type="submit">Generate link</button>
+  
+    </form>
+    <p></p>
+
+	<!-- end #webtivistform --></div>
+<!-- end #container --></div>
+</body>
+</html>
